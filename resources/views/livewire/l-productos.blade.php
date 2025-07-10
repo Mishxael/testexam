@@ -56,7 +56,6 @@
             </div>
         </div>
 
-        {{-- Botones de acción --}}
         <div style="margin-top: 10px;">
             <button type="submit" style="background-color: #4CAF50; color: white; padding: 8px 16px; border: none;">
                 {{ $editId ? 'Actualizar' : 'Guardar' }}
@@ -70,14 +69,14 @@
         </div>
     </form>
 
-    {{-- Mensaje flash --}}
+   
     @if (session()->has('mensaje'))
         <div style="color: lightgreen; margin-top: 10px;">
             {{ session('mensaje') }}
         </div>
     @endif
 
-    {{-- Listado de productos --}}
+  
     @foreach ($productos as $p)
         <div style="border: 1px solid #555; padding: 10px; margin-top: 10px;">
             <strong>{{ $p->nombre }}</strong> ({{ ucfirst($p->especie) }})<br>
